@@ -1,0 +1,269 @@
+/*==========================
+    ESTILOS GENERALES
+==========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
+}
+
+/*==========================
+        HEADER
+==========================*/
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+}
+
+.logo img{
+    width:85px;
+    border-radius:50%;
+    box-shadow:0 0 20px #00ff4c;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00ff4c;
+}
+
+/*==========================
+          HERO
+==========================*/
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-logo{
+    width:260px;
+    border-radius:50%;
+    box-shadow:0 0 40px #00ff4c;
+    animation:flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/*==========================
+          MENÚ
+==========================*/
+
+.menu{
+    padding:90px 8%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.menu img{
+    width:100%;
+    max-width:900px;
+    border-radius:20px;
+    border:3px solid #00ff4c;
+    box-shadow:0 0 35px #00ff4c;
+}
+
+/*==========================
+        SUCURSAL
+==========================*/
+
+.sucursal{
+    padding:90px 8%;
+    text-align:center;
+}
+
+.sucursal h2{
+    font-size:40px;
+    color:#00ff4c;
+    margin-bottom:20px;
+}
+
+.sucursal p{
+    font-size:20px;
+    line-height:35px;
+}
+
+.boton{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 40px;
+    background:#00ff4c;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.boton:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px #00ff4c;
+}
+
+/*==========================
+      REDES SOCIALES
+==========================*/
+
+.redes{
+    padding:90px 8%;
+    text-align:center;
+}
+
+.redes h2{
+    color:#00ff4c;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.redes-botones{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.social{
+    padding:15px 35px;
+    text-decoration:none;
+    color:#fff;
+    border:2px solid #00ff4c;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.social:hover{
+    background:#00ff4c;
+    color:#000;
+    box-shadow:0 0 20px #00ff4c;
+}
+
+/*==========================
+        FOOTER
+==========================*/
+
+footer{
+    padding:40px;
+    display:flex;
+    justify-content:center;
+}
+
+footer img{
+    width:90px;
+    border-radius:50%;
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:18px;
+}
+
+.hero-logo{
+    width:180px;
+}
+
+.menu img{
+    width:100%;
+}
+
+.sucursal h2,
+.redes h2{
+    font-size:30px;
+}
+
+.sucursal p{
+    font-size:17px;
+}
+
+}
+/*==========================
+    ANIMACIONES SCROLL
+==========================*/
+
+.oculto{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all .8s ease;
+}
+
+.visible{
+    opacity:1;
+    transform:translateY(0);
+}
